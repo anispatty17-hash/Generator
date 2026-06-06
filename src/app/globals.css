@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background: #0F172A;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.glass {
+  background: rgba(17,24,39,.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,.05);
+}
+
+.card {
+  @apply bg-[#111827] rounded-3xl shadow-2xl;
+}
