@@ -1,3 +1,5 @@
+import { NextRequest, NextResponse } from "next/server";
+
 export async function DELETE(req: NextRequest) {
 
   const id =
@@ -9,11 +11,6 @@ export async function DELETE(req: NextRequest) {
       { status: 400 }
     );
   }
-
-  await sql`
-    DELETE FROM sms_inbox
-    WHERE id=${Number(id)}
-  `;
 
   return NextResponse.json({
     success: true
